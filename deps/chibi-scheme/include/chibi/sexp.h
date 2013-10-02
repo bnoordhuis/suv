@@ -12,7 +12,11 @@ extern "C" {
 #define SEXP_MODULE_PATH_VAR "CHIBI_MODULE_PATH"
 
 #include "chibi/features.h"
+
+/* TODO(bnoordhuis) Generate install.h at gyp configure time. */
+#ifndef SEXP_NO_INSTALL_H
 #include "chibi/install.h"
+#endif
 
 #if defined(_WIN32) || defined(__MINGW32__)
 #include <windows.h>
